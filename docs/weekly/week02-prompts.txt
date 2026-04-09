@@ -1,0 +1,3 @@
+1. 把目前程式改成使用 javax.swing.Timer，每 16ms 更新一次，分開 updateGame() 和 paintComponent()。
+2. 加入一顆隕石，會從上往下移動，掉出底部就回到上方隨機位置。
+3. 在左上角顯示 score 或 frame count，讓我看得出遊戲持續在更新。
