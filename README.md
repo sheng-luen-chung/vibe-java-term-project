@@ -33,3 +33,10 @@ mkdir out -ErrorAction SilentlyContinue
 javac -d out src/week3/Week3CircleFollowsMouse.java
 java -cp out week3.Week3CircleFollowsMouse
 ```
+
+## Week 4 Quick Start
+```powershell
+mkdir out -ErrorAction SilentlyContinue
+javac -d out src/week4/Week4CircleFollowsMouse.java
+java -cp out week4.Week4CircleFollowsMouse
+```
