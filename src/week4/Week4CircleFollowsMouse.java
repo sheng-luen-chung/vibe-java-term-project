@@ -88,9 +88,9 @@ public class Week4CircleFollowsMouse {
         }
 
         void respawn(int panelWidth) {
-            int safeWidth = Math.max(panelWidth, 1);
             size = 20 + random.nextInt(21);
-            x = random.nextDouble() * safeWidth;
+            int maxSpawnX = Math.max(panelWidth - size, 0);
+            x = random.nextDouble() * (maxSpawnX + 1);
             y = -size - random.nextInt(200);
             speed = 2 + random.nextDouble() * 3;
         }
