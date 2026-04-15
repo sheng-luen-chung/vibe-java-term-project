@@ -1,5 +1,6 @@
 package week4;
 
+import java.awt.BorderLayout;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -14,6 +15,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -37,11 +40,21 @@ public class Week4CircleFollowsMouse {
 
     private static void createAndShowGui() {
         JFrame frame = new JFrame("Week 4 - Keyboard Control");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
         CirclePanel panel = new CirclePanel();
-        frame.setContentPane(panel);
-        frame.setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
+        RecordingToolbar recordingToolbar = new RecordingToolbar(panel);
+
+        frame.setLayout(new BorderLayout());
+        frame.add(recordingToolbar, BorderLayout.NORTH);
+        frame.add(panel, BorderLayout.CENTER);
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                recordingToolbar.stopRecordingIfActive();
+                frame.dispose();
+            }
+        });
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

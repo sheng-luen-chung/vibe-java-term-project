@@ -13,6 +13,8 @@
 - Added `P` key pause toggle and `R` key restart.
 - HUD now displays frame, score, and status (`RUNNING`/`PAUSED`/`GAME OVER`).
 - Existing meteor and bouncing meteor collision mechanics retained.
+- Added Swing recording toolbar with Start/Stop buttons.
+- Robot captures the game view and JavaCV encodes `docs/weekly/assets/week04-demo.mp4`.
 
 ## Main Class / Module Updated
 - `src/week4/Week4CircleFollowsMouse.java`
@@ -27,14 +29,15 @@
 - Completed weekly documentation and prompt archive in existing format.
 
 ## How I Validated AI Output
-- Compiled with:
-  - `javac -d out src/week4/Week4CircleFollowsMouse.java`
+- Maven compile/run path is required because of JavaCV:
+  - `mvn -q exec:java -Dexec.mainClass=week4.Week4CircleFollowsMouse`
 - Manual checks:
   - continuous movement while holding keys
   - movement stops on key release
   - bullet cap at 3
   - `P` pause and `R` restart behavior
   - status text updates correctly
+  - recording start/stop workflow and saved MP4 output
 
 ## AI Collaboration Record
 - Questions asked to AI:
