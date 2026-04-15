@@ -8,7 +8,9 @@
 
 ## Run Steps (PowerShell)
 ```powershell
-mvn -q exec:java -Dexec.mainClass=week4.Week4CircleFollowsMouse
+mkdir out -ErrorAction SilentlyContinue
+javac -d out src/week4/Week4CircleFollowsMouse.java
+java -cp out week4.Week4CircleFollowsMouse
 ```
 
 ## Expected Result
@@ -18,8 +20,6 @@ mvn -q exec:java -Dexec.mainClass=week4.Week4CircleFollowsMouse
 - `P` toggles pause/resume.
 - `R` resets game state.
 - HUD shows `RUNNING`, `PAUSED`, or `GAME OVER`.
-- Toolbar includes Start/Stop Recording buttons.
-- Recording writes `docs/weekly/assets/week04-demo.mp4` via Robot + JavaCV.
 
 ## Weekly Git Workflow
 ```powershell

@@ -36,10 +36,7 @@ java -cp out week3.Week3CircleFollowsMouse
 
 ## Week 4 Quick Start
 ```powershell
-mvn -q exec:java -Dexec.mainClass=week4.Week4CircleFollowsMouse
+mkdir out -ErrorAction SilentlyContinue
+javac -d out src/week4/Week4CircleFollowsMouse.java
+java -cp out week4.Week4CircleFollowsMouse
 ```
-
-## Week 4 Recording Setup
-- Week 4 now uses JavaCV for on-demand recording.
-- Start recording from the toolbar inside the app.
-- The output file is saved to `docs/weekly/assets/week04-demo.mp4` when you stop recording or close the window.

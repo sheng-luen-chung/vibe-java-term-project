@@ -14,8 +14,6 @@
   - pause toggle (`P`) and restart (`R`)
   - HUD status text for running/paused/game over
   - inherited meteor collision and score logic from previous week
-  - recording toolbar with Start/Stop controls
-  - Robot + JavaCV screen capture to `docs/weekly/assets/week04-demo.mp4`
 
 ## Evidence / Reporting Files
 - Weekly report: `docs/weekly/week04.md`
